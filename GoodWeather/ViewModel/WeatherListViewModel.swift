@@ -10,7 +10,7 @@ import Foundation
 //MARK: - WeatherListViewModel
 class WeatherListViewModel {
     
-    private var weatherViewModels = [WeatherViewModel]() {
+    var weatherViewModels = [WeatherViewModel]() {
         didSet {
             self.reloadTableViewClosure?()
         }

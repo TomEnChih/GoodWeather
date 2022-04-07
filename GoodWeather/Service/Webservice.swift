@@ -17,9 +17,7 @@ final class Webservice {
     func load<A>(resource: Resource<A>, completion: @escaping (A?) -> Void) {
         
         URLSession.shared.dataTask(with: resource.url) { data, response, error in
-            
-            print(data)
-            
+                        
             if let data = data {
                 DispatchQueue.main.async {
                     //resource.parse(data) -> JSON解析過的model

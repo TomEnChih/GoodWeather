@@ -40,7 +40,7 @@ class SettingViewModel {
             if let value = userDefaults.value(forKey: "unit") as? String {
                 unitValue = value
             }
-            return Unit(rawValue: unitValue)!
+            return Unit(rawValue: unitValue) ?? .fahrenheit
         }
         set {
             let userDefaults = UserDefaults.standard
